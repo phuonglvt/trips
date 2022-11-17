@@ -28,9 +28,9 @@ public class TripDatabase {
         while(cursor.moveToNext()){
             Trip trip = new Trip();
             trip.setId(cursor.getString(cursor.getColumnIndex("id")));
+            trip.setName(cursor.getString(cursor.getColumnIndex("name")));
             trip.setDestination(cursor.getString(cursor.getColumnIndex("destination")));
             trip.setDateOfTheTrip(cursor.getString(cursor.getColumnIndex("dateOfTheTrip")));
-//            boolean trip.setRequireAssessment = (cursor.getInt(cursor.getColumnIndex("requireAssessment")) !=0);
             trip.setDescription(cursor.getString(cursor.getColumnIndex("description")));
 
             list.add(trip);
@@ -55,6 +55,7 @@ public class TripDatabase {
     public long insert(Trip trip){
         ContentValues values = new ContentValues();
         values.put("id", trip.getId());
+        values.put("name", trip.getName());
         values.put("destination", trip.getDestination());
         values.put("dateOfTheTrip", trip.getDateOfTheTrip());
         values.put("requireAssessment", trip.getRequireAssessment());
@@ -65,6 +66,7 @@ public class TripDatabase {
 
     public long update(Trip trip){
         ContentValues values = new ContentValues();
+        values.put("name", trip.getName());
         values.put("destination", trip.getDestination());
         values.put("dateOfTheTrip", trip.getDateOfTheTrip());
         values.put("requireAssessment", trip.getRequireAssessment());

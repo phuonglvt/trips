@@ -2,18 +2,27 @@ package com.example.trips.model;
 
 
 public class Trip {
-    private String id, destination, description, dateOfTheTrip;
+    private String id, name, destination, description, dateOfTheTrip;
     private Boolean requireAssessment;
 
     public Trip() {
     }
 
-    public Trip(String destination, Boolean requireAssessment, String description, String id, String dateOfTheTrip) {
+    public Trip(String name, String destination, Boolean requireAssessment, String description, String id, String dateOfTheTrip) {
+        this.name = name;
         this.destination = destination;
         this.requireAssessment = requireAssessment;
         this.description = description;
         this.id = id;
         this.dateOfTheTrip = dateOfTheTrip;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDestination() {

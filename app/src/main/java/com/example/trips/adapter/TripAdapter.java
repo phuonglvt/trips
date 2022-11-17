@@ -24,7 +24,6 @@ public class TripAdapter extends BaseAdapter{
     public TripAdapter(Context context, List<Trip> list) {
         this.context = context;
         this.list = list;
-//        dbHelper = new DBHelper(context);
     }
 
     @Override
@@ -44,17 +43,18 @@ public class TripAdapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-//        View view = LayoutInflater.from(context).inflate(com.example.trips.R.layout.layout_trip_item, null);
         if (view == null){
             view = LayoutInflater.from(context).inflate(com.example.trips.R.layout.layout_trip_item, null);
         }
 
+        TextView tvName = view.findViewById(com.example.trips.R.id.tvName);
         TextView tvDestination = view.findViewById(com.example.trips.R.id.tvDestination);
         TextView tvDateOfTheTrip = view.findViewById(com.example.trips.R.id.tvDateOfTheTrip);
         TextView tvRequireAssessment = view.findViewById(com.example.trips.R.id.tvRequireAssessment);
         TextView tvDescription = view.findViewById(com.example.trips.R.id.tvDescription);
 
         Trip trip = list.get(i);
+        tvName.setText(trip.getName());
         tvDestination.setText(trip.getDestination());
         tvDateOfTheTrip.setText(trip.getDateOfTheTrip());
         tvRequireAssessment.setText(""+trip.getRequireAssessment());

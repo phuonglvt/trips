@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddOrEditTripActivity">
+    tools:context=".AddOrEditExpenseActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,15 +18,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="TripId" />
+            android:text="Type" />
 
         <EditText
-            android:id="@+id/editTripId"
+            android:id="@+id/etType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:ems="10"
-            android:hint="Trip ID"
+            android:hint="Enter Type"
             android:inputType="textPersonName"
             android:padding="5dp" />
 
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Name" />
+            android:text="Amount" />
 
         <EditText
             android:id="@+id/etAmount"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:ems="10"
-            android:hint="Enter Name"
+            android:hint="Enter Amount"
             android:inputType="textPersonName"
             android:padding="5dp" />
 
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Destination" />
+            android:text="Time of the expense" />
 
         <EditText
             android:id="@+id/etTimeExpense"
@@ -60,74 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:ems="10"
-            android:hint="Enter Destination"
+            android:hint="Enter Time of the expense*"
             android:inputType="textPersonName"
             android:padding="5dp" />
 
-        <TextView
-            android:id="@+id/dateOfTheTrip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Date Of The Trip" />
-
-        <EditText
-            android:id="@+id/editDateOfTheTrip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:ems="10"
-            android:hint="dd/mm/yyyy"
-            android:inputType="textPersonName"
-            android:padding="5dp" />
-
-        <TextView
-            android:id="@+id/requireAssessment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Require Assessment" />
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <RadioButton
-                android:id="@+id/radioYes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="5dp"
-                android:text="Yes"
-                android:onClick="checkButton"
-                tools:ignore="OnClick" />
-
-            <RadioButton
-                android:id="@+id/radioNo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="5dp"
-                android:text="No" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Description" />
-
-        <EditText
-            android:id="@+id/editDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:ems="10"
-            android:hint="Enter Description"
-            android:inputType="textPersonName"
-            android:padding="5dp" />
     </LinearLayout>
 
     <LinearLayout
